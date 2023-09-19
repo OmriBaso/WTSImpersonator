@@ -91,3 +91,6 @@ PS C:\Users\Jon\Desktop> .\WTSImpersonator.exe -m user-hunter -uh LABS/Administr
 
 [+] Deleted Service
 ```
+### Credits:
+Research / Coding: [Omri Baso](https://www.linkedin.com/in/omri-baso/)
+Graphics Logo: [Kim Dvash](https://www.linkedin.com/in/kim-d-5b3114111/)
