@@ -3,7 +3,7 @@ WTSImpersonator utilizes WTSQueryUserToken to steal other users tokens \(Local/R
   
 ![wtsLOGOwhite](https://github.com/OmriBaso/WTSImpersonator/assets/50461376/89391383-769e-4460-9adb-a146e290721a)
 
-### Usage: 
+## Usage: 
  
 ##### `enum` Module  
   
@@ -91,6 +91,6 @@ PS C:\Users\Jon\Desktop> .\WTSImpersonator.exe -m user-hunter -uh LABS/Administr
 
 [+] Deleted Service
 ```
-### Credits:
-Research / Coding: [Omri Baso](https://www.linkedin.com/in/omri-baso/)
-Graphics Logo: [Kim Dvash](https://www.linkedin.com/in/kim-d-5b3114111/)
+## Credits:
+#### Research / Coding: [Omri Baso](https://www.linkedin.com/in/omri-baso/)
+#### Graphics Logo: [Kim Dvash](https://www.linkedin.com/in/kim-d-5b3114111/)
