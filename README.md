@@ -1,4 +1,6 @@
 # WTSImpersonator
+![wtsLOGOwhite](https://github.com/OmriBaso/WTSImpersonator/assets/50461376/89391383-769e-4460-9adb-a146e290721a)
+
 WTSImpersonator utilizes WTSQueryUserToken to steal other users tokens \(Local/Remote\) without using NtOpenProcess or touching Lsass.exe by abusing RPC Named Pipe "\\pipe\LSM_API_service" \(Admin Privileges Required\)  
   
 ### Usage: 
