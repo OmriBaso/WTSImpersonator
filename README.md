@@ -1,5 +1,5 @@
 # WTSImpersonator
-WTSImpersonator utilizes WTSQueryUserToken to steal other users tokens without using NtOpenProcess or touching Lsass.exe by abusing RPC Named Pipe "\\pipe\LSM_API_service" \(Admin Privileges Required\)  
+WTSImpersonator utilizes WTSQueryUserToken to steal other users tokens \(Local/Remote\) without using NtOpenProcess or touching Lsass.exe by abusing RPC Named Pipe "\\pipe\LSM_API_service" \(Admin Privileges Required\)  
   
 ### Usage: 
  
