@@ -28,7 +28,8 @@ a normal "C:\Windows\System32\cmd.exe" and you will open a CMD as the user you d
 you could use PsExec64.exe in order to obtain a service context  
 ```powershell
 .\PsExec64.exe -accepteula -s cmd.exe
-```powershell
+```
+
 For `exec-remote` things are a bit different, I created a service that can be installed remotely just like `PsExec.exe`  
 the service will receive a `SessionId` and a `binary to run` as an argument and it will be installed and executed remotely given the right permissions  
 an example run would look as follows:
