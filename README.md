@@ -20,7 +20,7 @@ Enumerate a machine remotely given an IP or an Hostname.
 ```
 #### `exec` / `exec-remote` Module:  
 Both "exec" and "exec-remote" requires being in a **"Service"** context.  
-The local "exec" module does not need anything buy the WTSImpersonator.exe and the binary you want to execute \(-c flag\), this could be  
+The local "exec" module does not need anything but the WTSImpersonator.exe and the binary you want to execute \(-c flag\), this could be  
 a normal "C:\Windows\System32\cmd.exe" and you will open a CMD as the user you desire, an example would be  
 ```powershell
 .\WTSImpersonator.exe -m exec -s 3 -c C:\Windows\System32\cmd.exe  
